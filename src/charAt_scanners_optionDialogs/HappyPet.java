@@ -23,7 +23,7 @@ for (int i = 0; i < 11; i++) {
 		// pet happy
 		// (eg: cuddle, food, water, take a walk, groom, clean up poop).
 		// Make sure to customize the title and question too.
-		int task = JOptionPane.showOptionDialog(null, "What do you want do do with your " + pet + "?", "Pet activities",
+		int task = JOptionPane.showOptionDialog(null, "What do you want to do with your " + pet + "?", "Pet activities",
 				0, JOptionPane.INFORMATION_MESSAGE, null,
 				new String[] { "Cuddle", "Feed", "Pet", "Walk", "Clean house and poop", "Drown","Quit Game" }, null);
 
@@ -52,8 +52,10 @@ System.out.println(task);
 			}
 		// 6. If you determine the happiness level is large enough, tell the
 		// user that he loves his pet and use break; to exit for loop.
-if (happinessLevel ==100) {
-	break;
+if (happinessLevel >=100) {
+	
+JOptionPane.showMessageDialog(null, "Your "+ pet + " loves you and will stay with you for the rest of it's life.");
+break;
 }
 JOptionPane.showMessageDialog(null, "Your "+ pet +"'s happiness level is "+happinessLevel);
 }
