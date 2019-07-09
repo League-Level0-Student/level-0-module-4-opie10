@@ -14,15 +14,33 @@ public class SimpleCalculator {
 		int operation = JOptionPane.showOptionDialog(null,
 				"What opereration do you want to do with " + number1 + " and " + number2 + "?", "Pop-up Title", 0,
 				JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Add", "Subtract", "Multiply ", "Divide" }, null);
+System.out.println(operation);
+		
 
-		// 5. Call the methods created in steps 3 and 4 to perform the appropriate
+// 5. Call the methods created in steps 3 and 4 to perform the appropriate
 		// operation.
 double one =Double.parseDouble(number1);
 double two=Double.parseDouble(number2);
-Add(one,two);
-Subtract(one,two);
-Multiply(one,two);
-Divide(one,two);
+
+if (operation==0) {
+double A=	Add(one,two);
+	JOptionPane.showMessageDialog(null,A );
+
+}
+else if (operation==1) {
+	double S =Subtract(one,two);
+	JOptionPane.showMessageDialog(null,S );
+}
+else if (operation==2) {
+double M=	Multiply(one,two);
+JOptionPane.showMessageDialog(null,M );
+}
+
+else if (operation==3) {
+	double D = Divide(one,two);
+	JOptionPane.showMessageDialog(null,D );
+}
+
 		// 6. Wrap steps 1, 2 and 5 in a for loop to repeat calculator operations
 	}
 
